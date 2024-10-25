@@ -54,4 +54,25 @@ function timeConversion() {
         } else {console.log("time is valid [2]");}
     }
 
+    //conversion
+    let timeFormat = document.getElementById("AM/PM").value;
+    let time = {
+        hr: timeArr[0],
+        min: timeArr[1],
+        sec: timeArr[2],
+        timeFormat,
+    }
+
+    if (timeFormat === "AM") {
+        if (time.hr == "12") {
+            time.hr = "00";
+        }
+    } else if (timeFormat === "PM") {
+        if (time.hr != "12") {
+            time.hr = parseInt(time.hr) + 12;
+        }
+    }
+    //return result
+    console.log(time.hr + ":" + time.min + ":" + time.sec + " - SUCCESS");
+    return document.getElementById("result").innerHTML = time.hr + ":" + time.min + ":" + time.sec;
 }
