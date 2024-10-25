@@ -4,7 +4,8 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ONLINE TIME CONVERSION</title>
-        <link ref="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="icon" href="assets/logo.ico" type="image/x-icon"/>
         <script src="index.js"></script>
     </head>
     <body>
@@ -18,7 +19,7 @@
                     <option value="AM">AM</option>
                     <option value="PM">PM</option>
                 </select>
-                <input type="button" id="enterButton" name="enter" onclick="timeConversion()" value="Enter">
+                <input type="button" id="enterButton" name="enter" onclick="enterKeyPressed(event)" value="Enter">
             </form> 
             <p id="result"></p>
         </div>

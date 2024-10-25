@@ -1,15 +1,6 @@
 'use strict';
 
-//handle Enter key pressed
-function enterKeyPressed(event) {
-    if (event.key == "Enter") {
-        event.preventDefault();
-        document.getElementById("enterButton").click();
-    }
-}
-
-
-function timeConversion() {
+export function timeConversion() {
     document.getElementById("result").innerHTML = ""; //clear previous attempt
     //check if there is an input
     const initTime = document.getElementById("time").value.trim();
@@ -46,11 +37,11 @@ function timeConversion() {
                 return document.getElementById("result").innerHTML = "Invalid numbers of hours";
             } else if (timeArr[i] > 12) {
                 console.log("time is not in 12-hours format");
-                return document.getElementById("result").innerHTML = "time is not in 12 hours format";
+                return document.getElementById("result").innerHTML = "Time is not in 12 hours format";
             }
         } else if (timeArr[i] >= 60) { //check minutes/seconds
                 console.log("Can't have no more than 60 minutes/seconds");
-                return document.getElementById("result").innerHTML = "time can't have no more than 60 minutes/seconds";
+                return document.getElementById("result").innerHTML = "Time can't have no more than 60 minutes/seconds";
         } else {console.log("time is valid [2]");}
     }
 
