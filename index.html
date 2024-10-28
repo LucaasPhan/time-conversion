@@ -8,20 +8,21 @@
         <link rel="icon" href="assets/logo.ico" type="image/x-icon"/>
         <script src="index.js"></script>
     </head>
-    <body>
-        <div>
-            <h1>TIME CONVERSION</h1>
+    <body class="noto-sans-elbasan-regular">
+        <div class="main">
+            <img src="assets/logo.ico" alt="clock"/>
+            <h1><strong>TIME CONVERSION</strong></h1>
             <p>Enter time below for conversion from 12-hours format to 24-hours format</p>
+            <p>Follow the format hh:mm:ss</p>
             <form onsubmit="return false;">
-                <p>Follow the format hh:mm:ss</p>
                 <input type="text" id="time" name="time" onkeydown="enterKeyPressed(event)">
                 <select name="AM/PM" id="AM/PM">
                     <option value="AM">AM</option>
                     <option value="PM">PM</option>
                 </select>
-                <input type="button" id="enterButton" name="enter" onclick="enterKeyPressed(event)" value="Enter">
+                <input type="button" id="enterButton" name="enter" onclick="timeConversion()" value="Enter">
             </form> 
             <p id="result"></p>
-        </div>
+        </div>  
     </body>
 </html>

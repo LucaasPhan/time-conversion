@@ -1,3 +1,59 @@
-.button {
+.noto-sans-elbasan-regular {
+    font-family: "Noto Sans Elbasan", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+  
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: cyan;
+    flex-direction: column;
+    flex: 1;
+}
+
+#enterButton {
+    background-color: white;
+}
+
+#enterButton:hover {
+    background-color: cyan;
+}
+
+.main {
+    padding: 25px;
+    text-align: center;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    background-color: white;
+}
+
+img {
+    width: 25%; 
+    height: auto;
+}
+
+h1 {
+    padding-bottom: 10px;
+}
+
+p {
+    padding: 0;
+    margin: 5px;
+}
+
+form {
+    padding-top: 10px;
+}   
+
+#result {
+    padding-top: 15px;
 }

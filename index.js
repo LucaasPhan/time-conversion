@@ -1,12 +1,22 @@
 'use strict';
+//handle Enter key pressed
+function enterKeyPressed(event) {
+    if (event.key == "Enter") {
+        event.preventDefault();
+        timeConversion();
+    }
+}
 
-export function timeConversion() {
+function timeConversion() {
     document.getElementById("result").innerHTML = ""; //clear previous attempt
     //check if there is an input
     const initTime = document.getElementById("time").value.trim();
     if (initTime != "") {    
         console.log("DATA INITIATED");
-    } else { return console.log("NULL");}
+    } else { 
+        document.getElementById("result").innerHTML = "Where's your time?";
+        return console.log("NULL");
+    }
 
     //define var
     let timeArr = initTime.split(":");
@@ -67,3 +77,6 @@ export function timeConversion() {
     console.log(time.hr + ":" + time.min + ":" + time.sec + " - SUCCESS");
     return document.getElementById("result").innerHTML = time.hr + ":" + time.min + ":" + time.sec;
 }
+
+
+
