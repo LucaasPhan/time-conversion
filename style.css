@@ -13,7 +13,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: cyan;
+    background-color: rgb(6, 6, 24);
     flex-direction: column;
     flex: 1;
 }
@@ -27,6 +27,7 @@ html, body {
 }
 
 .main {
+    border-radius: 25px;
     padding: 25px;
     text-align: center;
     display: inline;
@@ -56,4 +57,16 @@ form {
 
 #result {
     padding-top: 15px;
+}
+
+.footer {
+    color: white;
+    
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+}
+
+.footer p {
+    padding-bottom: 10px;
 }
